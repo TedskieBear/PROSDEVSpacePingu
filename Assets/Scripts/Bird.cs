@@ -8,6 +8,11 @@ public class Bird : MonoBehaviour
 
     // Flap force
     public float force = 300;
+    public GameObject bullet;
+
+    // Fire
+    public Transform fireButton;
+    private float currentAmount;
 
     // Use this for initialization
     void Start()
@@ -21,12 +26,33 @@ public class Bird : MonoBehaviour
     {
         // Flap
         if (Input.GetKeyDown(KeyCode.Space))
-            GetComponent<Rigidbody2D>().AddForce(Vector2.up * force);
+            Jump();
+
+        if (Input.GetKeyDown("enter")) {
+            Fire();
+        }
     }
 
-    void OnCollisionEnter2D(Collision2D coll)
+void OnCollisionEnter2D(Collision2D coll)
     {
         // Restart
         Application.LoadLevel(Application.loadedLevel);
+    }
+
+    public void Jump()
+    {
+        GetComponent<Rigidbody2D>().AddForce(new Vector2(0, force));
+    }
+
+    public void Fire()
+    {
+        currentAmount = fireButton.GetComponent<FireScript>().currentAmount;
+        if (currentAmount >= 100) { 
+        GameObject b = (GameObject)(Instantiate(bullet, transform.position + transform.right * 1.5f, Quaternion.identity));
+
+        b.GetComponent<Rigidbody2D>().AddForce(transform.right * 1000);
+        
+        fireButton.GetComponent<FireScript>().currentAmount = 0;
+        }
     }
 }

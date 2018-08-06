@@ -33,13 +33,13 @@ public class Bird : MonoBehaviour
         {
             Application.LoadLevel(Application.loadedLevel); // this should be changed to a game over state :)
         }
-        else if (coll.gameObject.name == "Diamond Reward")
+        else if (coll.gameObject.name == "Diamond Reward(Clone)")
         {
             Destroy(coll.gameObject); // destroy the diamond object (make it disappear)
             // add code to add points to player's score
             // diamonds are for currency, added to player's amount at the end of the game proper
         }
-        else if (coll.gameObject.name == "Choco Butternut Donut" || coll.gameObject.name == "Strawberry Donut" || coll.gameObject.name == "Bavarian Donut")
+        else if (coll.gameObject.name == "Choco Butternut Donut(Clone)" || coll.gameObject.name == "Strawberry Donut(Clone)" || coll.gameObject.name == "Bavarian Donut(Clone)")
         {
             Debug.Log("Game Over");
             Application.LoadLevel(Application.loadedLevel);

@@ -16,4 +16,9 @@ public class Donut : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+            Destroy(this);
+    }
 }

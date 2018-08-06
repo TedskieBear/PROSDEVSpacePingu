@@ -18,7 +18,7 @@ public class Bird : MonoBehaviour
     void Start()
     {
         // Fly towards the right
-        GetComponent<Rigidbody2D>().velocity = Vector2.right * speed;
+       // GetComponent<Rigidbody2D>().velocity = Vector2.right * speed;
     }
 
     // Update is called once per frame
@@ -31,9 +31,6 @@ public class Bird : MonoBehaviour
         if (Input.GetKeyDown("enter")) {
             Fire();
         }
-
-            GetComponent<Rigidbody2D>().AddForce(Vector2.up * force);
->>>>>>> Feature_Obstacles
     }
 
 void OnCollisionEnter2D(Collision2D coll)
@@ -44,8 +41,7 @@ void OnCollisionEnter2D(Collision2D coll)
 
     public void Jump()
     {
-        transform.Translate(Vector3.up * 260 * Time.deltaTime, Space.World);
-        //GetComponent<Rigidbody2D>().AddForce(new Vector2(0, force));
+        GetComponent<Rigidbody2D>().AddForce(Vector2.up * force);
     }
 
     public void Fire()

@@ -20,8 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4806657484836824}
   - component: {fileID: 212906447446129242}
-  - component: {fileID: 50962754313781590}
-  m_Layer: 0
+  - component: {fileID: 58752513112612132}
+  - component: {fileID: 114437238499213264}
+  - component: {fileID: 50702712129780954}
+  m_Layer: 8
   m_Name: Fish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +43,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50962754313781590
+--- !u!50 &50702712129780954
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
@@ -61,6 +63,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &58752513112612132
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1587224600446672}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!114 &114437238499213264
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1587224600446672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6515d5c2ee705845a09f532532f9824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212906447446129242
 SpriteRenderer:
   m_ObjectHideFlags: 1

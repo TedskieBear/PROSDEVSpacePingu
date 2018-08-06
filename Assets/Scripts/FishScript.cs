@@ -2,15 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Donut : MonoBehaviour {
+public class FishScript : MonoBehaviour {
 
-    // Move speed
-    public float speed = 5;
-
-    // Use this for initialization
-    void Start () {
-        GetComponent<Rigidbody2D>().velocity = Vector2.left * speed;
-    }
+	// Use this for initialization
+	void Start () {
+		
+	}
 	
 	// Update is called once per frame
 	void Update () {

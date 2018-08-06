@@ -33,10 +33,14 @@ public class Bird : MonoBehaviour
         }
     }
 
-void OnCollisionEnter2D(Collision2D coll)
+void OnCollisionEnter2D(Collision2D col)
     {
-        // Restart
-        Application.LoadLevel(Application.loadedLevel);
+        if (col.gameObject.name != "Fish")
+        {
+            // Restart
+            Application.LoadLevel(Application.loadedLevel);
+            Destroy(this);
+        }
     }
 
     public void Jump()

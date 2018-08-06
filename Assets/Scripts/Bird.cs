@@ -4,7 +4,7 @@ using System.Collections;
 public class Bird : MonoBehaviour
 {
     // Movement speed
-    public float speed = 2;
+    // public float speed = 2;
 
     // Flap force
     public float force = 300;
@@ -31,6 +31,9 @@ public class Bird : MonoBehaviour
         if (Input.GetKeyDown("enter")) {
             Fire();
         }
+
+            GetComponent<Rigidbody2D>().AddForce(Vector2.up * force);
+>>>>>>> Feature_Obstacles
     }
 
 void OnCollisionEnter2D(Collision2D coll)

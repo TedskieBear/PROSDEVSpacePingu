@@ -41,7 +41,8 @@ void OnCollisionEnter2D(Collision2D coll)
 
     public void Jump()
     {
-        GetComponent<Rigidbody2D>().AddForce(new Vector2(0, force));
+        transform.Translate(Vector3.up * 260 * Time.deltaTime, Space.World);
+        //GetComponent<Rigidbody2D>().AddForce(new Vector2(0, force));
     }
 
     public void Fire()

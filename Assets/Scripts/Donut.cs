@@ -32,10 +32,6 @@ public class Donut : MonoBehaviour {
         }
         else{
             Physics2D.IgnoreLayerCollision(8, 9, true);
-            
-            Physics2D.IgnoreLayerCollision(8, 9, true);
         }
-            // Physics2D.IgnoreCollision(col.GetComponent<Collider2D>(), GetComponent<Collider2D>());
-            
     }
 }

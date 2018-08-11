@@ -213,8 +213,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   refillBar: {fileID: 878209952}
   currentAmount: 0
-  reloadSpeed: 1
-  multiplyer: 0
+  reloadSpeed: 20
+  multiplyer: 1
 --- !u!1 &107804107
 GameObject:
   m_ObjectHideFlags: 0

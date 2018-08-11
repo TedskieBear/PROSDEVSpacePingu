@@ -211,9 +211,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97a32e78e9ba7a743b4f0e404a980cc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  refillBar: {fileID: 0}
+  refillBar: {fileID: 878209952}
   currentAmount: 0
-  reloadSpeed: 0
+  reloadSpeed: 1
   multiplyer: 0
 --- !u!1 &107804107
 GameObject:

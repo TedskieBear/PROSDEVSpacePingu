@@ -8,6 +8,7 @@ public class Donut : MonoBehaviour {
     // Move speed
     public float speed = 5;
     public Text diamond;
+    public Text score;
 
     // Use this for initialization
     void Start () {
@@ -24,7 +25,7 @@ public class Donut : MonoBehaviour {
 
         if (col.gameObject.tag == "Player"){
             if (this.gameObject.tag == "Diamond"){
-                diamond.GetComponentInParent<DiamondScript> ().add();
+                diamond.GetComponentInParent<DiamondScript> ().add();   
 		        Destroy(this);
             }
             else if (this.gameObject.tag != "Diamond")
@@ -32,6 +33,10 @@ public class Donut : MonoBehaviour {
         }
         else{
             Physics2D.IgnoreLayerCollision(8, 9, true);
+            if(col.gameObject.tag == "OutsideBounds"){
+                score.GetComponentInParent<ScoreController>().add(10);
+		        Destroy(this.gameObject);
+            }
         }
     }
 }

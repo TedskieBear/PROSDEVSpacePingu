@@ -62,7 +62,7 @@ void OnCollisionEnter2D(Collision2D col)
             Application.LoadLevel(Application.loadedLevel);
             Destroy(this);
         }
-        else if (col.gameObject.name == "Diamond Reward(Clone)")
+        /*else if (col.gameObject.name == "Diamond Reward(Clone)")
         {
             int choice = Random.Range(0, 3);
             if (choice == 0)
@@ -86,7 +86,7 @@ void OnCollisionEnter2D(Collision2D col)
                 b.transform.localScale = new Vector3(3.0f, 3.0f);
                 b.GetComponent<Rigidbody2D>().AddForce(transform.right * 1000);
             }
-        }
+        }*/
         
     }
 

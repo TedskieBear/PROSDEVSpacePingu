@@ -29,7 +29,7 @@ public class Donut : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D col)
     {
-
+        Physics2D.IgnoreLayerCollision(8, 9, true);
         if (col.gameObject.tag == "Player"){
             if (this.gameObject.tag == "Diamond"){
                 diamond.GetComponentInParent<DiamondScript> ().add();   
@@ -38,12 +38,11 @@ public class Donut : MonoBehaviour {
             else if (this.gameObject.tag != "Diamond")
                 Destroy(col.gameObject);
         }
-        else{
-            Physics2D.IgnoreLayerCollision(8, 9, true);
-            if(col.gameObject.tag == "OutsideBounds"){
+        else if(col.gameObject.tag == "OutsideBounds"){
+            if (this.gameObject.tag != "Diamond"){
                 score.GetComponentInParent<ScoreController>().add(10);
-		        Destroy(this.gameObject);
             }
+            Destroy(this.gameObject);
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Bird : MonoBehaviour
 {
@@ -59,8 +60,9 @@ void OnCollisionEnter2D(Collision2D col)
         if (col.gameObject.name != "Fish" && col.gameObject.tag != "Diamond")
         {
             // Restart
-            Application.LoadLevel(Application.loadedLevel);
-            Destroy(this);
+            SceneManager.LoadScene("GameoverScreen", LoadSceneMode.Additive);
+            Time.timeScale = 0;
+            
         }
         else if (col.gameObject.name == "Diamond Reward(Clone)")
         {

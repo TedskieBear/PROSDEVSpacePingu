@@ -52,8 +52,11 @@ public class Bird : MonoBehaviour
     }
 
 void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.name != "Fish" && col.gameObject.name != "Diamond Reward(Clone)")
+        {
+        if (col.gameObject.tag == "Diamond"){
+                Destroy(col.gameObject);
+        }
+        if (col.gameObject.name != "Fish" && col.gameObject.tag != "Diamond")
         {
             // Restart
             Application.LoadLevel(Application.loadedLevel);

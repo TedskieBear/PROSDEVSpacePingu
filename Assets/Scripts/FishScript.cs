@@ -16,8 +16,7 @@ public class FishScript : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D col)
     {
-		if (col.gameObject.tag != "Diamond")
+		if (col.gameObject.tag != "Diamond(Clone)" && col.gameObject.name != "Pingu")
         	Destroy(col.gameObject);
-
     }
 }

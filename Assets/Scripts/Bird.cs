@@ -56,7 +56,7 @@ void OnCollisionEnter2D(Collision2D col)
         if (col.gameObject.tag == "Diamond"){
                 Destroy(col.gameObject);
         }
-        if (col.gameObject.name != "Fish" && col.gameObject.tag != "Diamond")
+        if (col.gameObject.name != "Fish(Clone)" && col.gameObject.tag != "Diamond")
         {
             // Restart
             Application.LoadLevel(Application.loadedLevel);

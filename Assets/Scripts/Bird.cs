@@ -57,7 +57,7 @@ void OnCollisionEnter2D(Collision2D col)
         if (col.gameObject.tag == "Diamond"){
                 Destroy(col.gameObject);
         }
-        if (col.gameObject.name != "Fish" && col.gameObject.tag != "Diamond")
+        if (col.gameObject.tag != "Fish" && col.gameObject.tag != "Diamond")
         {
             // Restart
             SceneManager.LoadScene("GameoverScreen", LoadSceneMode.Additive);
@@ -85,8 +85,9 @@ void OnCollisionEnter2D(Collision2D col)
             {
                 Debug.Log("Giant Fish");
                 GameObject b = (GameObject)(Instantiate(bullet, transform.position + transform.right * 1.5f, Quaternion.identity));
-                b.transform.localScale = new Vector3(3.0f, 3.0f);
+                b.transform.localScale = new Vector3(5.0f, 5.0f);
                 b.GetComponent<Rigidbody2D>().AddForce(transform.right * 1000);
+                
             }
         }
         
@@ -108,10 +109,10 @@ void OnCollisionEnter2D(Collision2D col)
 
         b.GetComponent<Rigidbody2D>().AddForce(transform.right * 1000);
 
-            if (unlimitedFire <= 0.00)
-            {
+        //    if (unlimitedFire <= 0.00)
+           // {
                 fireButton.GetComponent<FireScript>().currentAmount = 0;
-            }
+           // }
         }
     }
 }

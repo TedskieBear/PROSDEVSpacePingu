@@ -4,20 +4,12 @@ using UnityEngine;
 
 public class FishScript : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
     void OnCollisionEnter2D(Collision2D col)
     {
-		if (col.gameObject.tag != "Diamond")
-        	Destroy(col.gameObject);
-
+	Physics2D.IgnoreLayerCollision(11, 8, true);
+	  if (col.gameObject.tag != "Fish" && col.gameObject.tag != "Diamond" && col.gameObject.tag != "Player")
+        {
+			Destroy(col.gameObject);
+        }
     }
 }

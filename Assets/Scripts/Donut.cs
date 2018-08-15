@@ -32,6 +32,7 @@ public class Donut : MonoBehaviour {
         Physics2D.IgnoreLayerCollision(8, 9, true);
         if (col.gameObject.tag == "Fish") {
             Destroy(col.gameObject);
+            score.GetComponentInParent<ScoreController>().add(20);
         }
         if (col.gameObject.tag == "Player"){
             if (this.gameObject.tag == "Diamond"){

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Bird : MonoBehaviour
 {
@@ -13,6 +14,10 @@ public class Bird : MonoBehaviour
 
     // Fire
     public Transform fireButton;
+    public Text diamonds;
+    public Text score;
+    private int diamondCount;
+    private int scoreValue;
     private float currentAmount;
     private float unlimitedFire = 0.00f;
     private float slowTime = 0.00f;
@@ -62,7 +67,10 @@ void OnCollisionEnter2D(Collision2D col)
             // Restart
             SceneManager.LoadScene("GameoverScreen", LoadSceneMode.Additive);
             Time.timeScale = 0;
-            
+            int.TryParse(diamonds.text, out diamondCount);
+            int.TryParse(score.text, out scoreValue);
+            PlayerPrefs.SetInt("CurrentScore", scoreValue );
+            PlayerPrefs.SetInt("CurrentDiamonds", diamondCount);
         }
         else if (col.gameObject.name == "Diamond Reward(Clone)")
         {

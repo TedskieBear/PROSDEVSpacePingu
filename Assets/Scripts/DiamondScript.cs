@@ -9,13 +9,6 @@ public class DiamondScript : MonoBehaviour {
     private int diamondcount = 0;
 
 	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	}
 
 	public void add(){
 	    diamondcount++;

@@ -68,7 +68,7 @@ public class ObstacleManager : MonoBehaviour {
             }
             if (SPAWN_DELAY >= .75f)
             {
-                SPAWN_DELAY -= (Time.deltaTime * 0.08f);
+                SPAWN_DELAY -= (Time.deltaTime * 0.08f * TimeScale.donut);
             }
 
             //Debug.Log("speed = " + speed);

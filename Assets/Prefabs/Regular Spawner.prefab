@@ -447,8 +447,8 @@ MonoBehaviour:
   wallParent: {fileID: 1665216947756130}
   instantiatedObjects: []
   SPAWN_DELAY: 2.5
-  minY: -8.99
-  maxY: 8.99
+  minY: -8.49
+  maxY: 8.49
   minScale: 1.01
   maxScale: 3.99
 --- !u!114 &114267806144638668

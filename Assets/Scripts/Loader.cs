@@ -4,9 +4,14 @@ using UnityEngine.SceneManagement;
 
 public class Loader : MonoBehaviour
 {
+    AudioSource fxSound;
+    public AudioClip backMusic;
+    
     public void loadGame() {
         SceneManager.LoadScene("SampleScene");
         Time.timeScale = 1;
+        fxSound = GetComponent<AudioSource> ();
+        fxSound.Play ();
     }
 
     public void restartGame() {

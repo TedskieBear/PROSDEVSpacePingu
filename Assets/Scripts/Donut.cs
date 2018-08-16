@@ -9,6 +9,7 @@ public class Donut : MonoBehaviour {
     public float speed = 5;
     public Text diamond;
     public Text score;
+    public AudioSource coin;
 
     // Use this for initialization
     void Start () {
@@ -36,6 +37,7 @@ public class Donut : MonoBehaviour {
         }
         if (col.gameObject.tag == "Player"){
             if (this.gameObject.tag == "Diamond"){
+                coin.Play ();
                 diamond.GetComponentInParent<DiamondScript> ().add();   
 		        Destroy(this);
             }

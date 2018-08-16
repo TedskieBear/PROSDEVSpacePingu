@@ -517,7 +517,7 @@ GameObject:
   - component: {fileID: 1442712726}
   - component: {fileID: 1442712725}
   m_Layer: 5
-  m_Name: Text
+  m_Name: ScoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -666,6 +666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ff30ee42403524aa0b9b815916094d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMenuScore: {fileID: 1442712725}
 --- !u!1 &2017807695
 GameObject:
   m_ObjectHideFlags: 0
